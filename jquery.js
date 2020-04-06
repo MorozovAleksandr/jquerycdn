@@ -4,8 +4,8 @@ document.head.append(jq);
 jq.onload = function () {
     $('body').append('<div id="sa">');
     const urlParams = new URLSearchParams(window.location.search);
-    const bundleParam = urlParams.get('bundle');
-    if (bundleParam.length > 0) {
+    const bundleParam = urlParams.get('bundle')
+    if (bundleParam) {
         $.ajax({
             type: "GET",
             url: 'https://mytemplate.site/ajax/',
